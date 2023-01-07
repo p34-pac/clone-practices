@@ -324,3 +324,38 @@ function muted(){
             //     console.log(selection.children)
         }
     }
+
+    function sendMessage(){
+        let messageText = document.getElementById('message-input-box').value;
+        let moment = new Date()
+        let hr = moment.getHours()
+        let min = moment.getMinutes()
+        let date = moment.getDate()
+        let month = moment.getMonth();
+        month += 1;
+        let yr = moment.getFullYear();
+        let sentTime =`${hr}:${min} ${date}-${month}-${yr}`
+
+        let messageSent = {
+            messageText,
+            sentTime
+            // fromUser
+        }
+        if(messageText !== ''){
+            let messageSentDiv = document.createElement('div');
+
+            messageSentDiv.classList = 'message sent'
+            messageSentDiv.innerHTML = `
+                <div id="sent">
+                    <div id="message-sent">
+                        <b id="m-text">${messageText}</b>
+                        <b id="m-time">${hr}:${min}</b>
+                    </div>
+                </div>
+            `
+            document.querySelector('.chat-box').appendChild(messageSentDiv);
+            document.getElementById('message-input-box').value = ''
+
+        }
+
+    }

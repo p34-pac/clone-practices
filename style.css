@@ -4,6 +4,7 @@ body{
 }
 *:focus{
     outline: none;
+    word-wrap: break-word;
 }
 a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

@@ -297,7 +297,7 @@
                 </div>
             <div class="bottom-nav">
             <input type="text" id="message-input-box" placeholder="Type message here!">
-            <button id="btn-send">send</button>
+            <button id="btn-send" onclick="sendMessage()">send</button>
             </div>
         </div>
         `
