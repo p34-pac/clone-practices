@@ -325,6 +325,9 @@ function muted(){
         }
     }
 
+    
+    
+    
     function sendMessage(){
         let messageText = document.getElementById('message-input-box').value;
         let moment = new Date()
@@ -359,3 +362,5 @@ function muted(){
         }
 
     }
+
+    
